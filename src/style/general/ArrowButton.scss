@@ -1,0 +1,31 @@
+.arrow__button {
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all .3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+
+        svg {
+            animation: arrow 1s alternate infinite;
+        }
+    }
+}
+
+.text__center {
+    margin: 0 auto;
+}
+
+@keyframes arrow {
+    100% {
+        transform: translateX(5px);
+    }
+}

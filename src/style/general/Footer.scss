@@ -1,0 +1,68 @@
+@use "../../sass//index" as *;
+
+.contact {
+    background-color: $tint-blue;
+    color: #fff;
+    padding: 9.6rem 0 2.4rem 0;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: start;
+        gap: 3.2rem;
+
+        &__item {
+            display: grid;
+            gap: 2.4rem;
+
+            p,
+            span {
+                opacity: .8;
+            }
+
+            &:last-child {
+                grid-column: span 2;
+                width: fit-content;
+                padding: 1.7rem 3.7rem;
+                color: $dark-blue;
+                background-color: $yellow;
+                display: flex;
+                gap: 5rem;
+            }
+
+            &__icons {
+                display: flex;
+                gap: 2.6rem;
+            }
+        }
+    }
+}
+
+.author {
+    padding: 3.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:550px) {
+    .contact__content {
+        grid-template-columns: repeat(1, 1fr);
+
+        &__item {
+            grid-column: span 1 !important;
+
+            &:last-child {
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                text-align: center;
+            }
+
+            &__icons {
+                justify-content: center;
+            }
+        }
+    }
+
+}

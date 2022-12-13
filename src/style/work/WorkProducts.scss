@@ -1,0 +1,88 @@
+@use "../../sass//index" as *;
+
+.work__products {
+    &__menu {
+        display: flex;
+        justify-content: center;
+        gap: 3.3rem;
+        margin-bottom: 4.8rem;
+
+        li {
+            label {
+                cursor: pointer;
+            }
+
+            &:hover {
+                color: $royal-blue;
+            }
+        }
+
+        .active {
+            color: $royal-blue;
+        }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6.4rem 3.4rem;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            &:hover &__img {
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
+
+            &:nth-child(1) &__img {
+                background: linear-gradient(131.34deg, #F4EDE1 16.74%, #98B1C6 103.17%);
+            }
+
+            &:nth-child(2) &__img {
+                background: linear-gradient(131.34deg, #FFD3AF 16.74%, #4F56FF 103.17%);
+            }
+
+            &:nth-child(3) &__img {
+                background: linear-gradient(131.34deg, #EEBCA7 16.74%, #C8C8C8 103.17%);
+            }
+
+            &:nth-child(4) &__img {
+                background: linear-gradient(131.34deg, #C2E7F2 16.74%, #98A4FF 103.17%);
+            }
+
+            &:nth-child(5) &__img {
+                background: linear-gradient(131.34deg, #C5BCFF 16.74%, #9BF7D5 103.17%);
+            }
+
+            &:nth-child(6) &__img {
+                background: linear-gradient(131.34deg, #D2D6FD 16.74%, #D6ACEA 103.17%);
+            }
+
+            &__img {
+                padding: 3rem 4rem;
+                margin-bottom: 2.4rem;
+            }
+
+            &__content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1.2rem;
+
+                p {
+                    display: block;
+                    flex: 1;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    .work__products__card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

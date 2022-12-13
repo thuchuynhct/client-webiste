@@ -1,0 +1,12 @@
+@use "../../sass/index" as *;
+
+.home__features {
+    background-color: $grey;
+
+    &__heading {
+        max-width: 63rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 4.7rem;
+    }
+}

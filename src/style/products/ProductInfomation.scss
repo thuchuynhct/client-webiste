@@ -1,0 +1,25 @@
+@use "../../sass/index" as *;
+
+.products__info {
+    padding: 0;
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3.2rem;
+        border-bottom: 1px solid rgb($dark-blue, .3);
+
+        &__item {
+            p {
+                opacity: .8;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .products__info__card {
+        flex-direction: column;
+    }
+}

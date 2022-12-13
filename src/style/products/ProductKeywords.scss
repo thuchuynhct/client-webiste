@@ -1,0 +1,25 @@
+@use "../../sass/index" as *;
+
+.product__keywords {
+    padding-bottom: calc(12.8rem - 2.4rem);
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.4rem 0;
+
+        border-top: 1px solid rgb($dark-blue, .2);
+        border-bottom: 1px solid rgb($dark-blue, .2);
+
+        h6 {
+            color: $royal-blue;
+        }
+
+        p {
+            opacity: .7;
+            font-weight: 500;
+        }
+    }
+}

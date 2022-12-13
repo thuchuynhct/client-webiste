@@ -1,0 +1,37 @@
+@use "../../sass/index" as *;
+
+
+.about__us {
+    background-color: #F4F5F5;
+    padding-bottom: 0;
+
+    &__heading h6 {
+        font-size: 1.6rem;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 6rem;
+        margin-bottom: 8rem;
+
+        h3 {
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            opacity: .7;
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    .about__us__heading {
+        text-align: center;
+    }
+
+    .about__us__content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

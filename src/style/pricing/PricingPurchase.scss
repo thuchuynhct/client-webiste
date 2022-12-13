@@ -1,0 +1,154 @@
+@use "../../sass/index" as *;
+
+.pricing {
+    padding-bottom: 0;
+
+    &__heading {
+        max-width: 56rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 6.4rem;
+
+        h2 {
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            opacity: .7;
+        }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem;
+
+        &__item {
+            padding: 6.4rem 4.8rem;
+            background-color: $grey;
+            border-radius: 12px;
+            display: grid;
+            gap: 4.4rem;
+            cursor: pointer;
+
+            &:hover {
+                transform: scaleY(1.05);
+                background-color: $tint-blue;
+                color: #fff;
+
+                .pricing__card__item__price p {
+                    color: $yellow;
+                }
+
+                a {
+                    background-color: $yellow;
+                    color: $dark-blue;
+
+                    &:hover {
+                        background-color: #db9326;
+                    }
+                }
+            }
+
+            &__price {
+                display: flex;
+                gap: .8rem;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                p {
+                    color: $royal-blue;
+                }
+            }
+
+            &__desciption {
+
+                h6 {
+                    margin-bottom: 0.8rem;
+                }
+
+                p {
+                    opacity: .7;
+                }
+            }
+
+            &__features {
+                flex: 1;
+                display: grid;
+                align-items: flex-end;
+                gap: 2.2rem;
+
+                li {
+                    display: flex;
+                    gap: 1.2rem;
+                    align-items: center;
+                }
+            }
+
+            &__button {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .icon__active {
+        svg {
+            color: #97DAAD;
+        }
+
+        p {
+            opacity: 1;
+        }
+    }
+
+    .icon__inactive {
+
+        svg,
+        p {
+            color: #FC80AD;
+            mix-blend-mode: luminosity;
+        }
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .pricing__card {
+        grid-template-columns: repeat(1, 1fr);
+
+        &__item {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+        }
+    }
+
+}
+
+@media screen and (max-width:950px) {
+    .pricing__card {
+
+        &__item {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+
+            &__button {
+                grid-column: span 2;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .pricing__card {
+        &__item {
+            grid-template-columns: repeat(1, 1fr);
+
+            &__button {
+                grid-column: span 1;
+            }
+        }
+    }
+
+}

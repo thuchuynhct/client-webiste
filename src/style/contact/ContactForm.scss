@@ -1,0 +1,92 @@
+@use "../../sass/index" as *;
+
+.contact__form {
+
+    &__heading {
+        max-width: 56rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 6.4rem;
+
+        p {
+            opacity: .7;
+        }
+    }
+
+    form {
+        background-color: $grey;
+        padding: 5.5rem 7.7rem;
+        color: #000;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.2rem;
+
+        span {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        label {
+            cursor: pointer;
+
+            &:nth-child(5) {
+                grid-column: span 2;
+
+                textarea {
+                    height: 100%;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+            }
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1.8rem 3.2rem;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            background-color: transparent;
+            outline: none;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            &::placeholder {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #000;
+            }
+        }
+
+    }
+
+    &__button {
+        grid-column: span 2;
+        margin-top: 3.2rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: inline-block;
+            border-radius: 41px;
+            padding: 2.5rem 10rem;
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    .contact__form form {
+        padding: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+
+        >* {
+            grid-column: span 1 !important;
+        }
+
+        button {
+            padding: 2rem 5rem !important;
+        }
+    }
+}

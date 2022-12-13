@@ -1,0 +1,83 @@
+@use "../../sass/index" as *;
+
+.home__testimonials {
+    background: rgb($grey, .5);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 11rem;
+    }
+
+    &__heading {
+        p {
+            opacity: .7;
+        }
+    }
+
+    &__content {
+        position: relative;
+        ;
+        grid-column: span 2;
+
+        h5 {
+            margin-bottom: 4.9rem;
+        }
+
+        &__profile {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+
+            img {
+                width: 5.2rem;
+                height: 5.2rem;
+            }
+
+            label {
+                line-height: 2rem;
+            }
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            gap: 1rem;
+
+            .arrow__left,
+            .arrow__right {
+                background-color: #fff;
+                width: 4.8rem;
+                height: 4.8rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: solid 1px rgb($dark-blue, 0.1);
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $royal-blue;
+
+                    svg {
+                        color: #fff;
+                        opacity: 1;
+                    }
+                }
+
+                svg {
+                    color: $dark-blue;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+
+}

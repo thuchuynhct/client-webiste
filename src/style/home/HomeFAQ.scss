@@ -1,0 +1,92 @@
+@use "../../sass/index" as *;
+
+.home__faq {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+
+    &__heading {
+        h3 {
+            margin-bottom: 1.6rem;
+        }
+
+        a {
+            color: $royal-blue;
+        }
+
+    }
+
+    &__question {
+        grid-column: span 2;
+
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 6rem;
+            padding: 3.2rem 0;
+            border-bottom: solid 2px #ECECF1;
+
+            &:hover &__content h6 {
+                color: $royal-blue;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border: none;
+            }
+
+            &__order {
+                color: $royal-blue;
+            }
+
+            &__content {
+                flex: 1;
+                display: grid;
+                gap: 1.6rem;
+                overflow: hidden;
+
+                p {
+                    max-height: 0;
+                    transition: max-height .8s ease;
+                }
+
+                .active {
+                    max-height: 200px;
+
+                }
+            }
+
+            &__toogle {
+                opacity: .7;
+                transition: all .3s ease;
+            }
+
+            .rotate {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    .home__faq__container {
+        grid-template-columns: repeat(1, 1fr);
+
+        .home__faq__heading {
+            text-align: center;
+        }
+
+        .home__faq__question {
+            grid-column: span 1;
+        }
+    }
+
+}
+
+@media screen and (max-width:550px) {}

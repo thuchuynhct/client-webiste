@@ -1,0 +1,24 @@
+.blog__details {
+    padding-top: 0;
+
+    &__content {
+        h3 {
+            margin: 4rem 0 3.2rem 0;
+        }
+
+        p {
+            opacity: .7;
+        }
+
+        ul {
+            list-style: circle;
+            margin: 2.4rem 0;
+        }
+
+        img {
+            margin-top: 3.2rem;
+            aspect-ratio: 2.7;
+            object-fit: cover;
+        }
+    }
+}

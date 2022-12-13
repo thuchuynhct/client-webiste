@@ -1,0 +1,35 @@
+@use "../../sass//index" as *;
+
+.blog__hero {
+    text-align: center;
+    padding-bottom: 0;
+
+    h3,
+    p {
+        max-width: 83rem;
+        margin: auto;
+    }
+
+    p {
+        opacity: .7;
+        margin-bottom: 1.6rem;
+    }
+
+    img {
+        margin-bottom: 4.8rem;
+    }
+
+    a {
+        color: $royal-blue;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__info {
+        font-size: 1.8rem;
+        opacity: 1 !important;
+        margin-bottom: 3.2rem !important;
+    }
+}

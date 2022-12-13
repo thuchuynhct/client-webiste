@@ -1,0 +1,46 @@
+.brand__card {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+
+    &__logo,
+    &__logo__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__item {
+            gap: .8rem;
+
+            h6 {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .brand__card__logo__item {
+        h6 {
+            display: none;
+        }
+
+        svg {
+            transform: scale(1.4);
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    .brand__card {
+        text-align: center;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4rem;
+    }
+}
